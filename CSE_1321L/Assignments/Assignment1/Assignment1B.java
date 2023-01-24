@@ -25,7 +25,7 @@ public class Assignment1B {
         double item1total, item2total, fulltotal;
         ////////////////////////////////////
         //item 1
-        System.out.print("What\'re you buying?b");
+        System.out.print("What\'re you buying? ");
         Scanner sc = new Scanner (System.in);
         item1 = sc.nextLine();
         System.out.print("How many? ");
@@ -37,7 +37,7 @@ public class Assignment1B {
         System.out.print("What else\'re you buying? ");
         //created new scanner because it was bundling the what and how many question for this second item and then gave loads of errors
         item2 = sc.nextLine();
-        sc.nextLine
+        sc.nextLine();
         System.out.print("How many? ");
         item2amount = sc.nextInt();
         System.out.print("What do they cost? ");
