@@ -20,8 +20,8 @@ public class Assignment1C {
         System.out.print("Enter the month (number): ");
         monthnum = sc.nextInt();
         System.out.print("Enter the month (String): ");
-        Scanner s = new Scanner (System.in);
-        month = s.nextLine();
+        month = sc.nextLine();
+        sc.nextLine();
         System.out.print("Enter the year (number): ");
         year = sc.nextInt();
         System.out.println("Here are some ways to represent the date:");
@@ -32,7 +32,6 @@ public class Assignment1C {
         System.out.println(day+" "+month+" "+year);
 
         sc.close();
-        s.close();
 
     }
 }
