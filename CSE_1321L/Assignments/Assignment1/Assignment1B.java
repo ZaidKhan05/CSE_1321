@@ -36,12 +36,12 @@ public class Assignment1B {
         //item 2
         System.out.print("What else\'re you buying? ");
         //created new scanner because it was bundling the what and how many question for this second item and then gave loads of errors
-        Scanner s = new Scanner (System.in);
-        item2 = s.nextLine();
+        item2 = sc.nextLine();
+        sc.nextLine
         System.out.print("How many? ");
-        item2amount = s.nextInt();
+        item2amount = sc.nextInt();
         System.out.print("What do they cost? ");
-        item2unit = s.nextDouble();
+        item2unit = sc.nextDouble();
 
         //full total
         item1total = item1amount*item1unit;
@@ -58,6 +58,5 @@ public class Assignment1B {
         System.out.print("----");
 
         sc.close();
-        s.close();
     }
 }
