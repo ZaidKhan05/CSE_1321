@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //==================================== Program Lab3B.java ======================================
 /*
 Class: CSE 1321L
@@ -13,7 +15,38 @@ public class Lab3B
 {
     public static void main (String[] args)
     {
-
+        int hours1, grades1, hours2, grades2, hours3, grades3, hours4, grades4, hoursT, qualityT;
+        float GPA;
+        //course 1
+        System.out.print("Course 1 hours: ");
+        Scanner sc = new Scanner(System.in);
+        hours1 = sc.nextInt();
+        System.out.print("Grade for course 1: ");
+        grades1 = sc.nextInt();
+        //course 2
+        System.out.print("Course 2 hours: ");
+        hours2 = sc.nextInt();
+        System.out.print("Grade for course 2: ");
+        grades2 = sc.nextInt();
+        //course 3
+        System.out.print("Course 3 hours: ");
+        hours3 = sc.nextInt();
+        System.out.print("Grade for course 3: ");
+        grades3 = sc.nextInt();
+        //course 4
+        System.out.print("Course 4 hours: ");
+        hours4 = sc.nextInt();
+        System.out.print("Grade for course 4: ");
+        grades4 = sc.nextInt();
+        //Total hours
+        hoursT = hours1 + hours2 + hours3+ hours4;
+        System.out.println("Total hours is: " + hoursT);
+        //quality points
+        qualityT = hours1*grades1+hours2*grades2+hours3*grades3+hours4*grades4;
+        System.out.println("Total quality points is: " + qualityT);
+        //GPA
+        GPA = (float)qualityT/hoursT;
+        System.out.printf("Your GPA for this semester is " + String.format("%.5f", GPA));
     }
 }
 /*
