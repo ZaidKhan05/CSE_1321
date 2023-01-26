@@ -26,7 +26,7 @@ public class diagramFromW3Lecture {
         System.out.println("Lay low and keep hidden.");
 
     }
-    public static void main(String[] args) {
+    public static void main(String[]     args) {
         ///////////////////////////////////////
 
         ///////////
