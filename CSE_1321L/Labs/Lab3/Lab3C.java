@@ -23,6 +23,7 @@ public class Lab3C
         dimeVal = 10;
         nickelVal = 5;
         pennyVal = 1;
+        //preset dollar amount so the loop doesnt bug out hopefully
         dollarAmount = 0;
         //create scanner object
         Scanner sc = new Scanner(System.in);
