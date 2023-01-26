@@ -15,8 +15,7 @@ public class Lab3B
 {
     public static void main (String[] args)
     {
-        int hours1, grades1, hours2, grades2, hours3, grades3, hours4, grades4, hoursT, qualityT;
-        float GPA;
+        double hours1, grades1, hours2, grades2, hours3, grades3, hours4, grades4, hoursT, qualityT, GPA;
         //course 1
         System.out.print("Course 1 hours: ");
         Scanner sc = new Scanner(System.in);
@@ -45,7 +44,7 @@ public class Lab3B
         qualityT = hours1*grades1+hours2*grades2+hours3*grades3+hours4*grades4;
         System.out.println("Total quality points is: " + qualityT);
         //GPA
-        GPA = (float)qualityT/hoursT;
+        GPA = qualityT/hoursT;
         System.out.printf("Your GPA for this semester is " + GPA);
     }
 }
