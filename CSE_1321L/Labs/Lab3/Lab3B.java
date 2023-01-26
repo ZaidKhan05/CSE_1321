@@ -46,6 +46,6 @@ public class Lab3B
         System.out.println("Total quality points is: " + qualityT);
         //GPA
         GPA = (float)qualityT/hoursT;
-        System.out.printf("Your GPA for this semester is " + String.format("%.5f", GPA));
+        System.out.printf("Your GPA for this semester is " + GPA);
     }
 }

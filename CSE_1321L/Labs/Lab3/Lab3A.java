@@ -28,8 +28,8 @@ public class Lab3A
         APRD = APR / 100;
         minPayment = amountOwed * APRD / 12;
         //print results
-        System.out.println("Monthly percentage rate: " + MPR);
-        System.out.println("Minimum payment: $" + minPayment);
+        System.out.println("Monthly percentage rate: " +String.format("%.3f", MPR));
+        System.out.println("Minimum payment: $" + String.format("%.2f", minPayment));
 
     }
 }
