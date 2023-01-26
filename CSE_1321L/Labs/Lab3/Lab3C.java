@@ -9,38 +9,52 @@ Lab# Lab 3C
  */
 // Program Lab3C.java
 //
+
+import java.util.Scanner;
+
 public class Lab3C
 {
     public static void main (String[] args)
     {
+        //creating the variables
+        int quarterNum, dimeNum, nickelNum, pennyNum, quarterVal, dimeVal, nickelVal, pennyVal, totalVal, dollarAmount, changeAmount;
+        //assigning values to the coins
+        quarterVal = 25;
+        dimeVal = 10;
+        nickelVal = 5;
+        pennyVal = 1;
+        dollarAmount = 0;
+        //create scanner object
+        Scanner sc = new Scanner(System.in);
+        //ask for inputs on number of coins
+        System.out.print("Enter the number of quarters: ");
+        quarterNum = sc.nextInt();
+        System.out.print("Enter the number of dimes: ");
+        dimeNum = sc.nextInt();
+        System.out.print("Enter the number of nickels: ");
+        nickelNum = sc.nextInt();
+        System.out.print("Enter the number of pennies: ");
+        pennyNum = sc.nextInt();
+        //read back inputs
+        System.out.println("You entered "+quarterNum+" quarters.");
+        System.out.println("You entered "+dimeNum+" dimes.");
+        System.out.println("You entered "+nickelNum+" nickels.");
+        System.out.println("You entered "+pennyNum+" pennies.");
+        //math
+        totalVal = quarterNum*quarterVal+dimeNum*dimeVal+nickelNum*nickelVal+pennyNum*pennyVal;//yes its redundant to do for pennies but for consistency i keep
+        //while loop to separate the change from the dollar amount
+        while(totalVal > 100){
+            dollarAmount = dollarAmount + 1;
+            totalVal = totalVal - 100;
+        }
+        //once the total value is less than 100 cents(1 dollar) because the while loop ran
+        //set new total val to change amount
+        changeAmount = totalVal;
+        //print the total in terms of dollars and change
+        System.out.println("Your total is "+dollarAmount+" dollars and "+changeAmount+" cents.");
+
+        //THIS WORKED FIRST TRY WHAT IN THE WORLD I DIDNT EXPECT WHILE LOOPS TO WORK THIS EASILY IN JAVA WHAAAAAAAAAAAT
+
 
     }
 }
-/*
-Lab3C: Coins. We are going to design a program that determines the values of coins in a jar. The program will
-prompt the user to enter the number coins (i.e. quarters, dimes, nickels, and pennies). It will then print out the
-number of coins entered for each coin type on separate lines and calculates the total amount of money in the
-jar. An example run is shown below. The user input is in bold.
-////////////////////
-Sample run 1:
-Enter the number of quarters: 2  //input
-Enter the number of dimes: 2    //input
-Enter the number of nickels: 2  //input
-Enter the number of pennies: 2  //input
-You entered 2 quarters.
-You entered 2 dimes.
-You entered 2 nickels.
-You entered 2 pennies.
-Your total is 0 dollars and 82 cents.
-////////////////////
-Sample run 2:
-Enter the number of quarters: 2
-Enter the number of dimes: 3
-Enter the number of nickels: 4
-Enter the number of pennies: 5
-You entered 2 quarters.
-You entered 3 dimes.
-You entered 4 nickels.
-You entered 5 pennies.
-Your total is 1 dollars and 5 cents.
- */
