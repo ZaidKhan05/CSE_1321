@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //==================================== Program Lab3A.java ======================================
 /*
 Class: CSE 1321L
@@ -13,6 +15,17 @@ public class Lab3A
 {
     public static void main (String[] args)
     {
+        float amountOwed, APR, APRD, MPR, minPayment;
+        System.out.print("Amount owed: $");
+        Scanner sc = new Scanner(System.in);
+        amountOwed = sc.nextFloat();
+        System.out.print("APR: ");
+        APR = sc.nextFloat();
+        MPR = APR / 12f;
+        APRD = APR / 100;
+        minPayment = amountOwed * APRD / 12;
+        System.out.println("Monthly percentage rate: " + MPR);
+        System.out.println("Minimum payment: $" + minPayment);
 
     }
 }
