@@ -11,6 +11,8 @@ Assignment# Assignment 2B
 
 public class Assignment2B {
     public static void main (String[] args){
+        float time, speed;
+
 
     }
 }
