@@ -30,8 +30,14 @@ public class Assignment2A {
         divNum = firstNum / secondNum;
         //figure out modulus
         modAdd = addNum % moduloNum;
+        modSub = subNum % moduloNum;
+        modMult = multNum % moduloNum;
+        modDiv = divNum % moduloNum;
         //final output
         System.out.println(firstNum + " + " + secondNum + " = " + addNum +". The remainder if divided by " + moduloNum + " is " + modAdd + ".");
+        System.out.println(firstNum + " - " + secondNum + " = " + subNum +". The remainder if divided by " + moduloNum + " is " + modSub + ".");
+        System.out.println(firstNum + " * " + secondNum + " = " + multNum +". The remainder if divided by " + moduloNum + " is " + modMult + ".");
+        System.out.println(firstNum + " / " + secondNum + " = " + divNum +" (Approximately). The remainder if divided by " + moduloNum + " is " + modDiv + ".");
     }
 }
 /*
