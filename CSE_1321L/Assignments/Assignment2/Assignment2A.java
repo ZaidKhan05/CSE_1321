@@ -9,10 +9,29 @@ Assignment# Assignment 2A
  */
 
 
+import java.util.Scanner;
+
 public class Assignment2A {
     public static void main (String[] args){
-        System.out.print("hello");
-
+        //variables
+        int firstNum, secondNum, moduloNum, addNum, subNum, multNum, divNum, modAdd, modSub, modMult, modDiv;
+        //ask for input
+        Scanner sc = new Scanner(System.in);
+        System.out.print("First number: ");
+        firstNum = sc.nextInt();
+        System.out.print("Second number: ");
+        secondNum = sc.nextInt();
+        System.out.print("Number for Modulo Operation: ");
+        moduloNum = sc.nextInt();
+        //math
+        addNum = firstNum + secondNum;
+        subNum = firstNum - secondNum;
+        multNum = firstNum * secondNum;
+        divNum = firstNum / secondNum;
+        //figure out modulus
+        modAdd = addNum % moduloNum;
+        //final output
+        System.out.println(firstNum + " + " + secondNum + " = " + addNum +". The remainder if divided by " + moduloNum + " is " + modAdd + ".");
     }
 }
 /*
