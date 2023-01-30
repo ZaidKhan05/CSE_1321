@@ -142,5 +142,14 @@ public class Week2 {
         System.out.printf("%s %s %s\n", s1, i5, f4);
 
         //System.out.printf("%s %s %s\n", s1); This will crash as fewer values are provided than are referenced
+
+
+//
+//        public void toSeconds(double input)
+//        {
+//            int s1 = (input%1)*100;
+//            int s2 = (input-(input%1))*60;
+//            return s1+s2;
+//        }
     }
 }

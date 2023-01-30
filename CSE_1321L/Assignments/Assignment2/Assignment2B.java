@@ -9,9 +9,30 @@ Assignment# Assignment 2B
  */
 
 
+import java.util.Scanner;
+
 public class Assignment2B {
     public static void main (String[] args){
-        float time, speed;
+        float time, speed, timeInt, newTime;
+        int  savedTime;
+        System.out.println("[Fast-Forward]");
+        System.out.print("What is the original video time? ");
+        Scanner sc = new Scanner(System.in);
+        time = sc.nextFloat();
+        System.out.print("What is the playback speed factor? ");
+        speed = sc.nextFloat();
+
+        //math
+        timeInt = (time%1)*100;
+
+        while(time > 1f){
+            timeInt = timeInt + 60;
+            time = time - 1f;
+        }
+        newTime = timeInt / speed;
+        savedTime = (int)timeInt - (int)newTime;
+        System.out.println("The new video time would be " + (int)newTime + " second(s).");
+        System.out.println("That saves you " + savedTime + " second(s) from the original video speed.");
 
 
     }

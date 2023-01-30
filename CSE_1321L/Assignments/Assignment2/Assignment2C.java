@@ -8,11 +8,32 @@ Name: Zaid Khan
 Assignment# Assignment 2C
  */
 
-
+import java.util.Scanner;
 public class Assignment2C {
-    public static void main (String[] args){
-
+    static float distanceToMoon(float m)
+    {
+        return (float)(m * 0.0000000026f);
     }
+    static float distanceInMeters(float m)
+    {
+        return (float)(m * 40);
+    }
+    public static void main (String[] args){
+        System.out.println("[Distance Calculator]");
+            float animalCrackers;
+            float meters;
+            float distance;
+            System.out.print("How many meters? ");
+            Scanner sc = new Scanner(System.in);
+            meters = sc.nextFloat();
+            distance = distanceToMoon(meters);
+            animalCrackers = distanceInMeters(meters);
+            System.out.println(meters + " meter(s) is...\n..."+distance+ " distance from the Moon\n..."+animalCrackers+" Animal Crackers long");
+        }
+
+
+
+
 }
 /*
 Assignment 2C:
