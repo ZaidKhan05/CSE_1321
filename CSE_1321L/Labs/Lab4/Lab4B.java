@@ -15,6 +15,22 @@ public class Lab4B
 {
     public static void main (String[] args)
     {
+        String day;
+        System.out.print("Enter the day: ");
+        Scanner sc = new Scanner(System.in);
+        day = sc.nextLine();
+        if(day.equalsIgnoreCase("monday")){
+            System.out.print("I have class today!");
+        }
+        else if(day.equalsIgnoreCase("wednesday")){
+            System.out.print("I have class today!");
+        }
+        else if(day.equalsIgnoreCase("friday")){
+            System.out.print("It’s Friday! Friday! Gotta get down on Friday!");
+        }
+        else{
+            System.out.print("I should use this time to do my homework.");
+        }
 
     }
 }
