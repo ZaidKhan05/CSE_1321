@@ -15,7 +15,6 @@ public class Lab4A
 {
     public static void main (String[] args)
     {
-        //float AP, AN, AM, BP, BN, BM, CP, CN, CM, DP, DN, DM, F;
         float score;
         System.out.print("Enter the score of your exam: ");
         Scanner sc = new Scanner(System.in);
@@ -59,6 +58,9 @@ public class Lab4A
         }
         else if(score >= 0){
             System.out.print("F");
+        }
+        else{
+            System.out.print("That is not the right input.");
         }
 
 
