@@ -23,7 +23,7 @@ public class Lab4B
             System.out.print("I have class today!");
         }
         else if(day.equalsIgnoreCase("friday")){
-            System.out.print("It’s Friday! Friday! Gotta get down on Friday!");
+            System.out.print("It's Friday! Friday! Gotta get down on Friday!");
         }
         else{
             System.out.print("I should use this time to do my homework.");

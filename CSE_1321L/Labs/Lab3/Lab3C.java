@@ -44,7 +44,7 @@ public class Lab3C
         //math
         totalVal = quarterNum*quarterVal+dimeNum*dimeVal+nickelNum*nickelVal+pennyNum*pennyVal;//yes its redundant to do for pennies but for consistency i keep
         //while loop to separate the change from the dollar amount
-        while(totalVal > 100){
+        while(totalVal >= 100){
             dollarAmount = dollarAmount + 1;
             totalVal = totalVal - 100;
         }
