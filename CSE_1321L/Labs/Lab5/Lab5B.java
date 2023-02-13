@@ -22,7 +22,9 @@ public class Lab5B
         if(userInput%2 == 0 ){
             System.out.print("This number is divisible by 2");
         }
-        
+        else if(userInput%3 == 0){
+            System.out.print("This number is divisible by 3");
+        }
         else if(userInput%5 == 0 ){
             System.out.print("This number is divisible by 5");
         }

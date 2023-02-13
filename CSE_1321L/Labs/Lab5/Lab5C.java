@@ -25,10 +25,10 @@ public class Lab5C
             System.out.print("This point is the origin.");
         }
         else if(x == 0){
-            System.out.print("This point is on the x axis.");
+            System.out.print("This point is on the y axis.");
         }
         else if(y == 0){
-            System.out.print("This point is on the y axis.");
+            System.out.print("This point is on the x axis.");
         }
         else if(x > 0 && y > 0){
             System.out.print("This point is in the first quadrant.");
