@@ -9,7 +9,6 @@ Lab# Lab 5A
  */
 // Program Lab5A.java
 //
-import java.time.Year;
 import java.util.Scanner;
 
 public class Lab5A

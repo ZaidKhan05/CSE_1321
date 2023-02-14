@@ -34,7 +34,7 @@ public class Assignment3C {
                 System.out.print("We have to evacuate the park!");
             }
         }
-        else if(userInput.equals("No, I just turned the light off.")){
+        else if(userInput.equals("No, I just turned the light off.")||userInput.equals("No, I just turned off the light")){
             System.out.println("Oh thank goodness!");
         }
         sc.close();
