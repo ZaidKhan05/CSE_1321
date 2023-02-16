@@ -19,17 +19,20 @@ public class Lab6B
         int userInput;
         int counts = 0;
         int randInt = 0;
+        int randvar = 0;
         Random rand = new Random();
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number between 1 and 1000: ");
         userInput = sc.nextInt();
         // Generate random integers in range 0 to 9
 
-        while(userInput != randInt && userInput >= 1 && userInput <= 1000) {
-            randInt = rand.nextInt(1000);
+
+        while(userInput != randvar) {
+            randInt = rand.nextInt(999);
+            randvar = randInt+1;//because the randomizer includes 0
             counts++;
-            System.out.println("My guess was "+randInt);
+            System.out.print("\nMy guess was "+randvar);
         }
-        System.out.print("I guessed the number "+ userInput + " and it only took me "+ counts + " guesses");
+        System.out.print("\nI guessed the number "+ userInput + " and it only took me "+ counts + " guesses");
     }
 }

@@ -18,6 +18,7 @@ public class Lab6A
         int userInput, largestNumber;
         largestNumber = 0;
         Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter 10 numbers and this program will display the largest.\n");
 
         for(int counts = 1; counts <=10; counts++){
             System.out.print("Please enter number "+counts+": ");

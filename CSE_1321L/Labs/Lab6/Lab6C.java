@@ -13,54 +13,38 @@ import java.util.Scanner;
 
 public class Lab6C
 {
-    static int deposit(int bal){
-        Scanner testscanner = new Scanner(System.in);
-        System.out.print("How much would you like to deposit? : ");
-        int amountToDeposit = testscanner.nextInt();
-        bal=bal+amountToDeposit;
-        return(int)(bal);
-    }
-    static int withdrawal(int bal){
-        //e
-        Scanner testscanner = new Scanner(System.in);
-        System.out.print("How much would you like to withdraw? : ");
-        int amountToWithdraw = testscanner.nextInt();//why this not borken
-        bal=bal-amountToWithdraw;
-        return(int)(bal);
-    }
-    static int display(int bal){
-        return(int)(bal);
-    }
     public static void main (String[] args)
     {
-        //e
         Scanner sc = new Scanner(System.in);
-        Scanner scantest = new Scanner(System.in);
         int balance = 1000;
         int whatdo;
+        int amountToDeposit, amountToWithdraw;
         String continueornot;
-        boolean reloop;
         int testint = 1;
 
 
-        System.out.println("Welcome!\nYou have $"+balance+" in your account");
+        System.out.println("Welcome!\nYou have $"+balance+" in your account.");
         do{
-            testint = 2;
+
             System.out.print("Menu\n" +
-                    "0 – Make a deposit\n" +
-                    "1 – Make a withdrawal\n" +
-                    "2 – Display account value\n" +
-                    "Please make a selection: ");
+                    "0 - Make a deposit\n" +
+                    "1 - Make a withdrawal\n" +
+                    "2 - Display account value\n" +
+                    "\nPlease make a selection: ");
             whatdo = sc.nextInt();
             switch(whatdo){
                 case 0:
-                    balance = deposit(balance);
+                    System.out.print("How much would you like to deposit? : ");
+                    amountToDeposit = sc.nextInt();
+                    balance=balance+amountToDeposit;
                     break;
                 case 1:
-                    balance = withdrawal(balance);
+                    System.out.print("How much would you like to Withdraw? : ");
+                    amountToWithdraw = sc.nextInt();
+                    balance=balance-amountToWithdraw;
                     break;
                 case 2:
-                    balance = display(balance);//its for consistence ok
+                    balance = balance;
                     break;
                 default:
                     System.out.println("Invalid entry, please try again.");
@@ -69,16 +53,17 @@ public class Lab6C
                 System.out.println("Your current balance is $"+balance);
             }
             System.out.print("Would you like to return to the main menu (Y/N)? : ");
-            continueornot = scantest.nextLine();
-//            sc.nextline(); //this wouldnt work at all i needed to make a whole new scanner for this
+            sc.nextLine();
+            continueornot = sc.nextLine();
 
-            if(continueornot.equalsIgnoreCase("y")){
+            if(continueornot.equalsIgnoreCase("Y")){
                 testint = 1;
             }
             else if(continueornot.equalsIgnoreCase("N")){
                 testint = 2;
             }
         }while(testint == 1);
+        System.out.print("Thank you for banking with us!");
 
     }
 }

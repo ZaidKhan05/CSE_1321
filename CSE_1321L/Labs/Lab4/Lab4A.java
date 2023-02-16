@@ -19,7 +19,7 @@ public class Lab4A
         System.out.print("Enter the score of your exam: ");
         Scanner sc = new Scanner(System.in);
         score = sc.nextFloat();
-        System.out.print("Letter grade is: ");
+        System.out.print("Letter grade is: ");//should be changed to 1 lower for each?
         if(score >= 98){
             System.out.print("A+");
         }
