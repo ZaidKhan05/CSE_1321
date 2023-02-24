@@ -1,51 +1,51 @@
 /*
-Lab6C: Cha-Ching For this lab, use a do-while loop.
-A sentinel loop is a loop (a special while loop or a do-while loop) that continues to process data until it
-reaches a specific value(s) that signals that it should stop looping; this special value(s) is usually
-indicated as the condition of the while or do-while loop. A good example of a sentinel loop is the while
-loop that you had to write to verify user input in Lab6B, the special values were anything in the range of
-1 to 1000. Another very common application for this is allowing a user to rerun a program.
-Please write a very simple program that mimics a bank account. The program should start the user out
-with $1000. The program should print out a welcome menu once with the options present for the user.
-The program should allow the user to make a deposit, withdrawal, and see their current balance.
-Every time the user deposits or withdraws, the program should show the user their new balance; it
-should also ask the user if they want to return to the main menu. As long as the user types ‘Y’ or ‘y’
-the program should keep running.
-Remember, the class name should be Lab6C.
-The user input is indicated in bold.
-Sample output:
-Welcome!
-You have $1000 in your account.
-Menu
-0 – Make a deposit
-1 – Make a withdrawal
-2 – Display account value
-Please make a selection: 1
-How much would you like to withdraw? : 50
-Your current balance is $950
-Would you like to return to the main menu (Y/N)? : Y
-Menu
-0 – Make a deposit
-1 – Make a withdrawal
-2 – Display account value
-Please make a selection: 0
-How much would you like to deposit? : 100
-Your current balance is $1050
-Would you like to return to the main menu (Y/N)? : Y
-Menu
-0 – Make a deposit
-1 – Make a withdrawal
-2 – Display account value
-Please make a selection: 500
-Invalid entry, please try again.
-Would you like to return to the main menu (Y/N)? : Y
- Page 6 of 6
-Menu
-0 – Make a deposit
-1 – Make a withdrawal
-2 – Display account value
-Please make a selection: 2
-Your current balance is $1050
-Would you like to return to the main menu (Y/N)? : N
-Thank you for banking with us!
+Assignment4A: Do you know your loops? We’ve learned about three different kinds of loops
+in this module – WHILE loops, DO-WHILE loops, and FOR loops. In this assignment, we’re
+going to make sure you know what each one does.
+You will prompt the user to choose one of the following loops:
+1. A loop that might run zero or more times
+2. A loop that will always run at least once
+3. A loop with a predetermined start and end
+After the choice, you will prompt the user to enter a “start” number. If they chose option
+3, you must also ask them to enter an “end” number.
+You must then use the correct loop (based on the user’s choice) to print out numbers
+from the starting point to the end number. For options 1 and 2, the end number is 0,
+while for option 3 the user will define the end number themselves. Note that the loops
+will always count down from the start number. Review your lecture material to know
+which loop should be used for each option.
+Call the file Assignment4A (.java, .cs, .cpp) and the class name Assignment4A. User
+input is indicated in bold.
+Sample Output #1:
+What loop do you want to use?
+1) A loop that might run zero or more times
+2) A loop that will always run at least once
+3) A loop with a predetermined start and end
+Your choice: 1
+What’s your start number? 10
+Counting: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0,
+Sample Output #2:
+What loop do you want to use?
+1) A loop that might run zero or more times
+2) A loop that will always run at least once
+3) A loop with a predetermined start and end
+Your choice: 2
+What’s your start number? -20
+Counting: -20,
+Sample Output #3:
+What loop do you want to use?
+1) A loop that might run zero or more times
+2) A loop that will always run at least once
+3) A loop with a predetermined start and end
+Your choice: 1
+What’s your start number? -120
+Counting:
+Sample Output #4:
+What loop do you want to use?
+1) A loop that might run zero or more times
+2) A loop that will always run at least once
+3) A loop with a predetermined start and end
+Your choice: 3
+What’s your start number? -115
+What’s your end number? -120
+Counting: -115, -116, -117, -118, -119, -120,
  */

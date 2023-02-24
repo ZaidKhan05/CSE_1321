@@ -12,6 +12,41 @@ import java.util.Scanner;
 
 public class Assignment4A {
     public static void main(String args[]){
+        int choice;
+        int startNum;
+        int continuingNum = 0;
+        System.out.print("What loop do you want to use?\n" +
+                "1) A loop that might run zero or more times\n" +
+                "2) A loop that will always run at least once\n" +
+                "3) A loop with a predetermined start and end\n" +
+                "Your choice: ");
+        Scanner sc = new Scanner(System.in);
+        choice = sc.nextInt();
+        switch(choice){
+            case 1:
+                System.out.print("What's your start number? ");
+                startNum = sc.nextInt();
+                System.out.print("Counting: ");
+                for(int num = 0; num <= startNum; num++){
+                    System.out.print((startNum-num)+", ");
+                }
+            break;
+            case 2:
+                System.out.print("What's your start number? ");
+                startNum = sc.nextInt();
+                System.out.print("Counting: ");
+
+                do{
+                    System.out.print(startNum-continuingNum+", ");
+                    continuingNum++;
+                }while(startNum >= continuingNum);
+            break;
+            case 3:
+                System.out.print("What is your start number? ");
+                startNum = sc.nextInt();
+                System.out.print("What's your end number? ");
+
+        }
 
     }
 }
