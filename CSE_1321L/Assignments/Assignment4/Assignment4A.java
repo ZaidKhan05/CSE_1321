@@ -35,7 +35,6 @@ public class Assignment4A {
                 System.out.print("What's your start number? ");
                 startNum = sc.nextInt();
                 System.out.print("Counting: ");
-
                 do{
                     System.out.print(startNum-continuingNum+", ");
                     continuingNum++;
@@ -45,7 +44,12 @@ public class Assignment4A {
                 System.out.print("What is your start number? ");
                 startNum = sc.nextInt();
                 System.out.print("What's your end number? ");
-
+                continuingNum = sc.nextInt();
+                System.out.print("Counting: ");
+                while(startNum >= continuingNum){
+                    System.out.print(startNum+", ");
+                    startNum--;
+                }
         }
 
     }

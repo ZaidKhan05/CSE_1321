@@ -13,7 +13,55 @@ import java.util.Scanner;
 public class Assignment4B {
 
     public static void main(String args[]){
+        int sizeSquare, sizeBorder, colorSquare, colorBorder, width, height;
+        Scanner sc = new Scanner(System.in);
+        do{
+            System.out.print("Enter the size of the square: ");
+            sizeSquare = sc.nextInt();
+            if(sizeSquare < 1){
+                System.out.println("Invalid input!");
+            }
+        }while(sizeSquare < 1);
+        do{
+            System.out.print("Enter the size of the border: ");
+            sizeBorder = sc.nextInt();
+            if(sizeBorder < 1){
+                System.out.println("Invalid input!");
+            }
+        }while(sizeBorder < 1);
+        do{
+            System.out.print("Enter the color of the square: ");
+            colorSquare = sc.nextInt();
+            if(colorSquare < 0||colorSquare > 1){
+                System.out.println("Invalid input!");
+            }
+        }while(colorSquare < 0 || colorSquare > 1);
+        do{
+            System.out.print("Enter the color of the border: ");
+            colorBorder = sc.nextInt();
+            if(colorBorder < 0){
+                System.out.println("Invalid input!");
+            }
+        }while(colorBorder < 0 || colorBorder > 1);
 
+        width = sizeSquare+sizeBorder*2;
+        height = sizeSquare+sizeBorder*2;
+
+        System.out.println("PBM File Contents:\nP1");
+
+        System.out.println(width+" "+height);
+
+        for(int i = 1; i<=height; i++){
+            for(int j = 1; j<=width; j++){
+                if(i<=sizeBorder || i>(sizeBorder+sizeSquare) || j<=sizeBorder || j>(sizeBorder+sizeSquare)){
+                    System.out.print(colorBorder+" ");
+                }
+                else{
+                    System.out.print(colorSquare + " ");
+                }
+            }
+            System.out.println();
+        }
     }
 }
 /*

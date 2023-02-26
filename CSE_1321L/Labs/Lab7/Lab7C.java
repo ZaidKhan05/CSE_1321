@@ -15,19 +15,21 @@ public class Lab7C
     public static void main (String[] args)
     {
         int size;
+        int help;
         System.out.print("Please enter a value for the size: ");
         Scanner sc = new Scanner(System.in);
         size = sc.nextInt();
         System.out.println("This is the requested "+size+"x"+size+" right-triangle:");
         for(int i = 0; i<size;i++){
+            help = size-1;
             for(int j = 0; j<size;j++){
-                if(j<i){
-                    System.out.print("L");
+                if(help>i){
+                    System.out.print(" ");
                 }
-                if(j>=size) {
+                if(help<=i) {
                     System.out.print("*");
-//paiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin
                 }
+                help--;
             }
             System.out.println();
         }

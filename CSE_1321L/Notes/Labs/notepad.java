@@ -1,44 +1,4 @@
 /*
-Assignment4A: Do you know your loops? We’ve learned about three different kinds of loops
-in this module – WHILE loops, DO-WHILE loops, and FOR loops. In this assignment, we’re
-going to make sure you know what each one does.
-You will prompt the user to choose one of the following loops:
-1. A loop that might run zero or more times
-2. A loop that will always run at least once
-3. A loop with a predetermined start and end
-After the choice, you will prompt the user to enter a “start” number. If they chose option
-3, you must also ask them to enter an “end” number.
-You must then use the correct loop (based on the user’s choice) to print out numbers
-from the starting point to the end number. For options 1 and 2, the end number is 0,
-while for option 3 the user will define the end number themselves. Note that the loops
-will always count down from the start number. Review your lecture material to know
-which loop should be used for each option.
-Call the file Assignment4A (.java, .cs, .cpp) and the class name Assignment4A. User
-input is indicated in bold.
-Sample Output #1:
-What loop do you want to use?
-1) A loop that might run zero or more times
-2) A loop that will always run at least once
-3) A loop with a predetermined start and end
-Your choice: 1
-What’s your start number? 10
-Counting: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0,
-Sample Output #2:
-What loop do you want to use?
-1) A loop that might run zero or more times
-2) A loop that will always run at least once
-3) A loop with a predetermined start and end
-Your choice: 2
-What’s your start number? -20
-Counting: -20,
-Sample Output #3:
-What loop do you want to use?
-1) A loop that might run zero or more times
-2) A loop that will always run at least once
-3) A loop with a predetermined start and end
-Your choice: 1
-What’s your start number? -120
-Counting:
 Sample Output #4:
 What loop do you want to use?
 1) A loop that might run zero or more times
@@ -48,4 +8,65 @@ Your choice: 3
 What’s your start number? -115
 What’s your end number? -120
 Counting: -115, -116, -117, -118, -119, -120,
+Assignment 4B: Create your own image!
+Most images are saved in binary format – this means they are not human readable
+without special software like a hex editor. However, a few are saved in ASCII mode, and
+you can read and edit them with just a text editor. One such type is the monochrome
+Portable Bitmap image format. For this assignment, you will create a program that
+generates the contents of a PBM file for a square image (we’ll learn how to actually
+save a file in CSE 1322).
+PBM files have the following header format:
+P1
+WIDTH HEIGHT
+DATA
+“P1” is an ID that tells programs this is a PBM file; it must be on the first line. Following
+that are the width and height of the image as integers. Finally we have the data itself; a
+series of 1s and 0s that represent the pixels (1 == black, 0 == white).
+You will first prompt the user for the following information:
+ What size square do they want to make?
+ What size border should the square have?
+ What color should the square be?
+ What color should the border be?
+Use loops to prevent the user from advancing until they enter valid information for each
+question. Then, generate the PBM file contents and display it to the user. If you’re
+interested in actually seeing the image itself, check the appendix of this assignment.
+Call the file name Assignment4B(.java, .cs, .cpp) and the class name Assignment4B.
+User input is indicated in bold
+Sample Output #1:
+Enter the size of the square: -5
+Invalid input!
+Enter the size of the square: 5
+Enter the size of the border: 1
+Enter the color of the square: 1
+Enter the color of the border: 0
+PBM File Contents:
+P1
+7 7
+0 0 0 0 0 0 0
+0 1 1 1 1 1 0
+0 1 1 1 1 1 0
+0 1 1 1 1 1 0
+0 1 1 1 1 1 0
+0 1 1 1 1 1 0
+0 0 0 0 0 0 0
+Sample Output #2:
+Enter the size of the square: 4
+Enter the size of the border: 3
+Enter the color of the square: 2
+Invalid input!
+Enter the color of the square: 1
+Enter the color of the border: 0
+PBM File Contents:
+P1
+10 10
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 1 1 1 1 0 0 0
+0 0 0 1 1 1 1 0 0 0
+0 0 0 1 1 1 1 0 0 0
+0 0 0 1 1 1 1 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
  */
