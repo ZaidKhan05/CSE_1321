@@ -1,4 +1,4 @@
-//==================================== Program Lab7B.java ======================================
+//==================================== Program Lab8B.java ======================================
 /*
 Class: CSE 1321L
 Section: J51
@@ -7,7 +7,7 @@ Instructor: Dmitri Nunes Dias Fernandes
 Name: Zaid Khan
 Lab# Lab 6B
  */
-// Program Lab7B.java
+// Program Lab8B.java
 //
 import java.util.Scanner;
 import java.util.Random;

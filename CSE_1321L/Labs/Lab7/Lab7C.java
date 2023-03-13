@@ -1,13 +1,13 @@
-//==================================== Program Lab7C.java ======================================
+//==================================== Program Lab8C.java ======================================
 /*
 Class: CSE 1321L
 Section: J51
 Term: Spring
 Instructor: Dmitri Nunes Dias Fernandes
 Name: Zaid Khan
-Lab# Lab 6C
+Lab# Lab 7C
  */
-// Program Lab7C.java
+// Program Lab8C.java
 //
 import java.util.Scanner;
 public class Lab7C
@@ -29,7 +29,7 @@ public class Lab7C
                 if(help<=i) {
                     System.out.print("*");
                 }
-                help--;
+                help--;//this was pain
             }
             System.out.println();
         }
