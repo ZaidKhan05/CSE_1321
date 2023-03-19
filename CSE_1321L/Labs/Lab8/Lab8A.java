@@ -20,13 +20,13 @@ public class Lab8A
         int[] array1 = new int[5];
         int[] array2 = new int[5];
         //int[] arraySum = new int [5];
-        System.out.println("Please enter 5 integers for the first array");
+        System.out.println("Please enter 5 integers for the first array: ");
         for(int i = 0; i < array1.length; i++){
             System.out.print("Integer " + (i+1) + ": ");
             arrayInput = sc.nextInt();
             array1[i] = arrayInput;
         }
-        System.out.println("Please enter 5 integers for the second array");
+        System.out.println("Please enter 5 integers for the second array: ");
         for(int i = 0; i < array1.length; i++){
             System.out.print("Integer " + (i+1) + ": ");
             arrayInput = sc.nextInt();
