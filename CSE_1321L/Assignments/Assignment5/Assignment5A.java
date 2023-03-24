@@ -17,12 +17,14 @@ public class Assignment5A {
         Scanner sc = new Scanner(System.in);
         boolean sentinel = true;
         int choice;
+        String choiceString;
         int [] id = {0,1,2,3,4};
-        String[] firstName = {"Mark", "Amanda", "Norman", "Steve", "Jesse"};
+        String[] firstName = {"Mark", "Amanda", "Norman", "Steven", "Jesse"};
         String[] lastName = {"Sloan", "Bentley", "Briggs", "Sloan", "Travis"};
         int[] age = {67,33,47,35,24};
         String[] occupation = {"Chief of Internal Medicine", "Pathologist", "Administrator", "Hospital Security", "Surgeon Intern"};
         Boolean[] medLicense = {true, true, false, false, true};
+        String[] columns = {"id", "firstName", "lastName", "age", "occupation", "medLicenseStatus"};
         /////////////////////////////////////
         System.out.println("[Community General Hospital Directory]");
         do{
@@ -37,12 +39,58 @@ public class Assignment5A {
             switch (choice){
                 case(1):
                     //list everything
+                    for(int i = 0; i<id.length; i++){
+                        System.out.print("#"+id[i]+": ");
+                        System.out.print(firstName[i]+ " "+ lastName[i]+", ");
+                        System.out.print("Age "+age[i]+", ");
+                        System.out.print(occupation[i]+", ");
+                        System.out.print("Medical License: "+ medLicense[i]);
+                        System.out.println();
+                    }
                     break;
                 case(2):
                     //search by id
+                    do{
+                        System.out.print("ID: ");
+                        choice = sc.nextInt();
+                        if(choice < 0 || choice > (id.length-1)){
+                            System.out.println("Invalid ID!");
+                        }
+                        else{
+                            sentinel = false;
+                        }
+                    }while(sentinel);
+                    sentinel = true;
+                    System.out.print("#"+id[choice]+": ");
+                    System.out.print(firstName[choice]+ " "+ lastName[choice]+", ");
+                    System.out.print("Age "+age[choice]+", ");
+                    System.out.print(occupation[choice]+", ");
+                    System.out.print("Medical License: "+ medLicense[choice]);
+                    System.out.println();
                     break;
                 case(3):
                     //search by last name
+                    do{
+                        System.out.print("Last Name: ");
+                        sc.nextLine();
+                        choiceString = sc.nextLine();
+                        for(int i = 0; i< lastName.length; i++){
+                            if(choiceString.equalsIgnoreCase(lastName[i])){
+                                choice = i;
+                                sentinel = false;
+                                System.out.print("#"+id[choice]+": ");
+                                System.out.print(firstName[choice]+ " "+ lastName[choice]+", ");
+                                System.out.print("Age "+age[choice]+", ");
+                                System.out.print(occupation[choice]+", ");
+                                System.out.print("Medical License: "+ medLicense[choice]);
+                                System.out.println();
+                            }
+
+                        }
+
+                    }while(sentinel);
+                sentinel = true;
+
                     break;
                 case(4):
                     //quit
