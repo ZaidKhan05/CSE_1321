@@ -1,3 +1,61 @@
+//==================================== Program Assignment5A.java ======================================
+/*
+Class: CSE 1321L
+Section: J51
+Term: Spring
+Instructor: Dmitri Nunes Dias Fernandes
+Name: Zaid Khan
+Assignment# Assignment 5A
+ */
+
+import java.util.Scanner;
+
+public class Assignment5A {
+    public static void main(String args[]){
+        //e
+        /////////////////////////////////////
+        Scanner sc = new Scanner(System.in);
+        boolean sentinel = true;
+        int choice;
+        int [] id = {0,1,2,3,4};
+        String[] firstName = {"Mark", "Amanda", "Norman", "Steve", "Jesse"};
+        String[] lastName = {"Sloan", "Bentley", "Briggs", "Sloan", "Travis"};
+        int[] age = {67,33,47,35,24};
+        String[] occupation = {"Chief of Internal Medicine", "Pathologist", "Administrator", "Hospital Security", "Surgeon Intern"};
+        Boolean[] medLicense = {true, true, false, false, true};
+        /////////////////////////////////////
+        System.out.println("[Community General Hospital Directory]");
+        do{
+            //e
+            System.out.println("1) List all employees\n" +
+                    "2) Search employee records by ID\n" +
+                    "3) Search employee records by Last Name\n" +
+                    "4) Quit");
+            System.out.print("Choice: ");
+            choice = sc.nextInt();
+
+            switch (choice){
+                case(1):
+                    //list everything
+                    break;
+                case(2):
+                    //search by id
+                    break;
+                case(3):
+                    //search by last name
+                    break;
+                case(4):
+                    //quit
+                    sentinel = false;
+                    System.out.println("[ClosingDirectory...]");
+                    break;
+                default:
+                    System.out.println("No option " + choice + "!");
+            }
+        }while(sentinel);
+
+    }
+}
 /*
  Assignment 5 A: Hospital Directory. You’ve been asked to develop a directory look-up program
 for Community General Hospital. You will create multiple 1D arrays, predefined with the
