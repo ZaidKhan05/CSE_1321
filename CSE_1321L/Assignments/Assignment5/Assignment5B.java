@@ -14,6 +14,81 @@ public class Assignment5B {
 
     public static void main(String args[]){
         //e
+        /////////////////////////////////////
+        Scanner sc = new Scanner(System.in);
+        boolean sentinel = true;
+        int width, height, fillColor, choice;
+        /////////////////////////////////////
+        System.out.println("[KSU Image Manipulation Program]");
+        do{
+            System.out.print("Enter an image width: ");
+            width = sc.nextInt();
+            if(width < 1){
+                System.out.println("Invalid input!");
+            }
+        }while(width < 1);
+        do{
+            System.out.print("Enter an image height: ");
+            height = sc.nextInt();
+            if(height < 1){
+                System.out.println("Invalid input!");
+            }
+        }while(height < 1);
+        do{
+            System.out.print("Enter the fill color: ");
+            fillColor = sc.nextInt();
+            if(fillColor < 1 || fillColor > 255){
+                System.out.println("Invalid input!");
+            }
+        }while(fillColor < 1 || fillColor > 255);
+        ///////////////////////////////
+        //create 2d array for image
+        int[][] pbmImage = new int [height][width];
+        for(int i = 0; i < pbmImage.length; i++){
+            for(int j = 0; j <pbmImage[0].length; j++){
+                pbmImage[i][j] = fillColor;
+            }
+        }
+        do{
+            //e
+            System.out.println("What will you do?\n" +
+                    "1) Fill in a pixel\n" +
+                    "2) Fill in a line\n" +
+                    "3) Print the image\n" +
+                    "4) Quit");
+            System.out.print("Choice? ");
+            choice = sc.nextInt();
+
+            switch (choice){
+                case(1):
+                    //fill in pixel
+                    
+                    break;
+                case(2):
+                    //fill in line
+                    
+                    break;
+                case(3):
+                    //print image
+                    for(int i = 0; i < pbmImage.length; i++){
+                        for(int j = 0; j <pbmImage[0].length; j++){
+                            System.out.print((pbmImage[i][j]) + " ");
+                        }
+                        System.out.println();
+                    }
+
+                    break;
+                case(4):
+                    //quit
+                    sentinel = false;
+                    System.out.println("[ClosingDirectory...]");
+                    break;
+                default:
+                    System.out.println("That is not an option!");
+                    
+            }
+        }while(sentinel);
+
     }
 }
 /*

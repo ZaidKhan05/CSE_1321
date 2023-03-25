@@ -24,7 +24,6 @@ public class Assignment5A {
         int[] age = {67,33,47,35,24};
         String[] occupation = {"Chief of Internal Medicine", "Pathologist", "Administrator", "Hospital Security", "Surgeon Intern"};
         Boolean[] medLicense = {true, true, false, false, true};
-        String[] columns = {"id", "firstName", "lastName", "age", "occupation", "medLicenseStatus"};
         /////////////////////////////////////
         System.out.println("[Community General Hospital Directory]");
         do{
@@ -74,7 +73,7 @@ public class Assignment5A {
                         System.out.print("Last Name: ");
                         sc.nextLine();
                         choiceString = sc.nextLine();
-                        for(int i = 0; i< lastName.length; i++){
+                        for(int i = 0; i< id.length; i++){
                             if(choiceString.equalsIgnoreCase(lastName[i])){
                                 choice = i;
                                 sentinel = false;
