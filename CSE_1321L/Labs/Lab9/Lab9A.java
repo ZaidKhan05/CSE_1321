@@ -16,27 +16,34 @@ public class Lab9A
     {
         //e
         Scanner sc = new Scanner(System.in);
-        int arrayInput;
-        int[] array1 = new int[5];
-        int[] array2 = new int[5];
+        int userInput;
+        boolean sentinel = true;
+        int[] array1 = new int[10];
         //int[] arraySum = new int [5];
-        System.out.println("Please enter 5 integers for the first array: ");
-        for(int i = 0; i < array1.length; i++){
+        System.out.println("Please enter 10 numbers: ");
+        for(int i = 0; i < array1.length;i++){
             System.out.print("Integer " + (i+1) + ": ");
-            arrayInput = sc.nextInt();
-            array1[i] = arrayInput;
+            userInput = sc.nextInt();
+            array1[i] = userInput;
         }
-        System.out.println("Please enter 5 integers for the second array: ");
-        for(int i = 0; i < array1.length; i++){
-            System.out.print("Integer " + (i+1) + ": ");
-            arrayInput = sc.nextInt();
-            array2[i] = arrayInput;
-        }
-        System.out.print("The resulting sums are ");
         for(int i = 0; i< array1.length; i++){
-            System.out.print((array1[i]+array2[i]) + "|");
+            System.out.print((array1[i]) + "|");
         }
-
+        System.out.print("What is the target number: ");
+        userInput = sc.nextInt();
+        for(int i = 0; i< array1.length; i++){
+            if(userInput == array1[i]){
+                System.out.print("The target is in the set.");
+                sentinel = false;
+                break;
+            }
+            else{
+                sentinel = true;
+            }
+        }
+        if(sentinel){
+            System.out.print("The target is not in the set.");
+        }
     }
 }
 /*
