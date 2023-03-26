@@ -19,7 +19,6 @@ public class Lab9A
         int userInput;
         boolean sentinel = true;
         int[] array1 = new int[10];
-        //int[] arraySum = new int [5];
         System.out.println("Please enter 10 numbers: ");
         for(int i = 0; i < array1.length;i++){
             System.out.print("Integer " + (i+1) + ": ");

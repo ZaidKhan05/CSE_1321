@@ -16,24 +16,33 @@ public class Lab9B
     public static void main (String[] args)
     {
         //e
-        int rows, columns;
-        int count = 1;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Please enter the number of rows: ");
-        rows = sc.nextInt();
-        System.out.print("Please enter the number of columns: ");
-        columns = sc.nextInt();
-        System.out.println("I have " + rows + " rows and " + columns + " columns. I need to fill-up " + (rows*columns) +" spaces.");
-        int[][] arraySpaces = new int [rows][columns];
-        System.out.println("The " + rows + "x" + columns + " array:");
-
-        for(int i = 0; i < arraySpaces.length; i++){
-            for(int j = 0; j <arraySpaces[0].length; j++){
-                arraySpaces[i][j] = count;
-                count++;
-                System.out.print((arraySpaces[i][j]) + "|");
+        int userInput;
+        boolean sentinel = true;
+        int[] array1 = new int[11];
+        System.out.println("Please enter 11 numbers: ");
+        for(int i = 0; i < array1.length;i++){
+            System.out.print("Integer " + (i+1) + ": ");
+            userInput = sc.nextInt();
+            array1[i] = userInput;
+        }
+        for(int i = 0; i< array1.length; i++){
+            System.out.print((array1[i]) + "|");
+        }
+        System.out.print("What is the target number: ");
+        userInput = sc.nextInt();
+        for(int i = 0; i< array1.length; i++){
+            if(userInput == array1[i]){
+                System.out.print("The target is in the set.");
+                sentinel = false;
+                break;
             }
-            System.out.println();
+            else{
+                sentinel = true;
+            }
+        }
+        if(sentinel){
+            System.out.print("The target is not in the set.");
         }
     }
 }
