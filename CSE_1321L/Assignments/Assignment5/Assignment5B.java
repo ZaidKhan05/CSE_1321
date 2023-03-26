@@ -17,7 +17,7 @@ public class Assignment5B {
         /////////////////////////////////////
         Scanner sc = new Scanner(System.in);
         boolean sentinel = true;
-        int width, height, fillColor, choice;
+        int width, height, fillColor, choice, row, column;
         /////////////////////////////////////
         System.out.println("[KSU Image Manipulation Program]");
         do{
@@ -62,7 +62,22 @@ public class Assignment5B {
             switch (choice){
                 case(1):
                     //fill in pixel
-                    
+                    do {
+                        System.out.print("Row: ");
+                        row = sc.nextInt();
+                        System.out.print("Column: ");
+                        column = sc.nextInt();
+                        System.out.print("New Color: ");
+                        fillColor = sc.nextInt();
+                        if(row>pbmImage.length||row<1||column> pbmImage[0].length||column<1||fillColor < 1 || fillColor > 255){
+                            System.out.println("error");
+                        }
+                        else{
+                            sentinel = false;
+                        }
+                    }while(sentinel);
+                    sentinel = true;
+                    pbmImage[row][column] = fillColor;
                     break;
                 case(2):
                     //fill in line
@@ -70,6 +85,10 @@ public class Assignment5B {
                     break;
                 case(3):
                     //print image
+                    System.out.println("PGM Image Contents\n" +
+                            "P2\n" +
+                            width+" " +height+"\n" +
+                            "255");
                     for(int i = 0; i < pbmImage.length; i++){
                         for(int j = 0; j <pbmImage[0].length; j++){
                             System.out.print((pbmImage[i][j]) + " ");
