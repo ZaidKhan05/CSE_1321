@@ -17,7 +17,8 @@ public class Assignment5B {
         /////////////////////////////////////
         Scanner sc = new Scanner(System.in);
         boolean sentinel = true;
-        int width, height, fillColor, choice, row, column;
+        int width, height, fillColor, choice, row, column, fillLength, help;
+        String direction;
         /////////////////////////////////////
         System.out.println("[KSU Image Manipulation Program]");
         do{
@@ -70,7 +71,7 @@ public class Assignment5B {
                         System.out.print("New Color: ");
                         fillColor = sc.nextInt();
                         if(row>pbmImage.length||row<1||column> pbmImage[0].length||column<1||fillColor < 1 || fillColor > 255){
-                            System.out.println("error");
+                            System.out.println("Invalid information!");
                         }
                         else{
                             sentinel = false;
@@ -81,7 +82,63 @@ public class Assignment5B {
                     break;
                 case(2):
                     //fill in line
-                    
+                    do {
+                        System.out.print("Row: ");
+                        row = sc.nextInt();
+                        System.out.print("Column: ");
+                        column = sc.nextInt();
+                        System.out.print("New Color: ");
+                        fillColor = sc.nextInt();
+                        System.out.print("Length: ");
+                        fillLength = sc.nextInt();
+                        System.out.print("Direction: ");
+                        sc.nextLine();
+                        direction = sc.nextLine();
+                        if(row>pbmImage.length||row<1||column> pbmImage[0].length||column<1||fillColor < 1 || fillColor > 255 || !(direction.equals("up")|| direction.equals("down")|| direction.equals("left")|| direction.equals("right"))){
+                            System.out.println("Invalid information!");
+                        }
+                        else{
+                            sentinel = false;
+                        }
+                    }while(sentinel);
+                    sentinel = true;
+                    if(direction.equals("up")){
+                        ++row;
+                        help = row-1;
+                        for(int i = 0; i < row; i++){
+                            if(help<fillLength) {
+                                pbmImage[i][column] = fillColor;
+                            }
+                            help--;
+                        }
+                    }
+                    else if(direction.equals("down")){
+                        ++row;
+                        help = row-1;
+                        for(int i = 0; i < row; i++){
+                            if(help<fillLength) {
+                                pbmImage[i][column] = fillColor;
+                            }
+                            help--;
+                        }
+                    }
+                    else if(direction.equals("left")){
+                        ++column;
+                        help = column-1;
+                        for(int i = 0; i < column; i++){
+                            if(help<fillLength) {
+                                pbmImage[row][i] = fillColor;
+                            }
+                            help--;
+                        }
+                    }
+                    else if(direction.equals("right")){
+                        for(int i = 0; i < pbmImage.length; i++){
+                            for(int j = 0; j <pbmImage[0].length; j++){
+                                
+                            }
+                        }
+                    }
                     break;
                 case(3):
                     //print image
