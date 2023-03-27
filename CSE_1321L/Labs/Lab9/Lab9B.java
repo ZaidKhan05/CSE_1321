@@ -18,7 +18,6 @@ public class Lab9B
         //e
         Scanner sc = new Scanner(System.in);
         int userInput;
-        boolean sentinel = true;
         int[] array1 = new int[11];
         System.out.println("Please enter 11 numbers: ");
         for(int i = 0; i < array1.length;i++){
@@ -26,23 +25,52 @@ public class Lab9B
             userInput = sc.nextInt();
             array1[i] = userInput;
         }
+        for(int i = 0; i<array1.length-1; i++){
+            for(int j = 0; j<array1.length-i-1; j++){
+                if(array1[j]>array1[j+1]){
+                    int temp = array1[j];
+                    array1[j] = array1[j+1];
+                    array1[j+1] = temp;
+                }
+            }
+        }
+
+        System.out.print("What is the target number: ");
+        userInput = sc.nextInt();
+        System.out.print("The sorted set is: ");
         for(int i = 0; i< array1.length; i++){
             System.out.print((array1[i]) + "|");
         }
-        System.out.print("What is the target number: ");
-        userInput = sc.nextInt();
-        for(int i = 0; i< array1.length; i++){
-            if(userInput == array1[i]){
-                System.out.print("The target is in the set.");
-                sentinel = false;
+
+        int low = 0, mid = 0;
+        int high = array1.length-1;
+        boolean found = false;
+        while(high>=low){
+            mid = (low+high)/2;
+            System.out.println("Low is "+ low);
+            System.out.println();
+            System.out.println("High is "+ high);
+            System.out.println();
+            System.out.println("Mid is "+ mid);
+            System.out.println();
+            System.out.println("Searching");
+            System.out.println();
+            if(userInput<array1[mid]){
+                high = mid-1;
+            }
+            else if(userInput == array1[mid]){
+                found = true;
                 break;
             }
             else{
-                sentinel = true;
+                low = mid+1;
             }
         }
-        if(sentinel){
+        if(found == false){
             System.out.print("The target is not in the set.");
+        }
+        else if(found == true){
+            System.out.print("The target is in the set.");
         }
     }
 }

@@ -25,9 +25,6 @@ public class Lab9A
             userInput = sc.nextInt();
             array1[i] = userInput;
         }
-        for(int i = 0; i< array1.length; i++){
-            System.out.print((array1[i]) + "|");
-        }
         System.out.print("What is the target number: ");
         userInput = sc.nextInt();
         for(int i = 0; i< array1.length; i++){
