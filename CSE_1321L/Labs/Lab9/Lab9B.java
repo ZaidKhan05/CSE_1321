@@ -39,8 +39,9 @@ public class Lab9B
         userInput = sc.nextInt();
         System.out.print("The sorted set is: ");
         for(int i = 0; i< array1.length; i++){
-            System.out.print((array1[i]) + "|");
+            System.out.print((array1[i]) + " ");
         }
+        System.out.println();
 
         int low = 0, mid = 0;
         int high = array1.length-1;
