@@ -5,7 +5,7 @@ Section: J51
 Term: Spring
 Instructor: Dmitri Nunes Dias Fernandes
 Name: Zaid Khan
-Lab# Lab 9B
+Lab# Lab 10B
  */
 // Program Lab10B.java
 //
@@ -16,11 +16,11 @@ public class Lab10B
     public static boolean isValid(double width, double height){
         //e
         boolean result;
-        if(width<height){
-            result = false;
+        if((width+height)>30){
+            result = true;
         }
         else{
-            result = true;
+            result = false;
         }
         return result;
     }
@@ -41,11 +41,10 @@ public class Lab10B
         String checker;
         Scanner sc = new Scanner(System.in);
         do{
-        System.out.print("Enter width: ");
-        width = sc.nextDouble();
-        System.out.print("Enter height: ");
-        height = sc.nextDouble();
-
+            System.out.print("Enter width: ");
+            width = sc.nextDouble();
+            System.out.print("Enter height: ");
+            height = sc.nextDouble();
             if(isValid(width, height) == false){
                 System.out.println("This is an invalid rectangle");
             }

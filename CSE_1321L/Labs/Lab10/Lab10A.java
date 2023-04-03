@@ -5,7 +5,7 @@ Section: J51
 Term: Spring
 Instructor: Dmitri Nunes Dias Fernandes
 Name: Zaid Khan
-Lab# Lab 9A
+Lab# Lab 10A
  */
 // Program Lab10A.java
 //
