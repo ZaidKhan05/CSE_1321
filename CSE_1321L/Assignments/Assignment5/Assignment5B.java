@@ -113,14 +113,7 @@ public class Assignment5B {
                         }
                     }
                     else if(direction.equals("down")){
-                        ++row;
-                        help = row-1;
-                        for(int i = 0; i < row; i++){
-                            if(help<fillLength) {
-                                pbmImage[i][column] = fillColor;
-                            }
-                            help--;
-                        }
+                        System.out.println("this is confusion");
                     }
                     else if(direction.equals("left")){
                         ++column;
@@ -133,11 +126,7 @@ public class Assignment5B {
                         }
                     }
                     else if(direction.equals("right")){
-                        for(int i = 0; i < pbmImage.length; i++){
-                            for(int j = 0; j <pbmImage[0].length; j++){
-                                
-                            }
-                        }
+                        System.out.println("this is confusion");
                     }
                     break;
                 case(3):
