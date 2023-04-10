@@ -13,62 +13,79 @@ Lab# Lab 11B
 import java.util.Scanner;
 public class Lab11B
 {
-    public static boolean isValid(double width, double height){
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
         //e
-        boolean result;
-        if(width<height){
-            result = false;
+        String password;
+        System.out.print("Enter a password: ");
+        password = sc.nextLine();
+        char[] pswd= new char[password.length()];
+        boolean charLimit = false, upperLimit = false, digitLimit = false;
+        if(pswd.length >= 8){
+            charLimit = true;
         }
         else{
-            result = true;
+            charLimit = false;
         }
-        return result;
-    }
-    public static double area(double width, double height){
-        //e
-        double result = width*height;
-        return result;
-    }
-    public static double perimeter(double width, double height){
-        //e
-        double result = width*2+height*2;
-        return result;
-    }
-    public static void main (String[] args) {
-        //e
-        double width, height;
-        boolean sentinel = true;
-        String checker;
-        Scanner sc = new Scanner(System.in);
-        do{
-        System.out.print("Enter width: ");
-        width = sc.nextDouble();
-        System.out.print("Enter height: ");
-        height = sc.nextDouble();
-
-            if(isValid(width, height) == false){
-                System.out.println("This is an invalid rectangle");
+        for(int i = 0; i < pswd.length; i++){
+            boolean upperFlag = Character.isUpperCase(password.charAt(i));
+            if(upperFlag){
+                upperLimit = true;
+                break;
             }
-            else if(isValid(width, height) == true){
-                System.out.println("The area is: "+ area(width, height));
-                System.out.println("The perimeter is: "+ perimeter(width, height));
+        }
+        for(int i = 0; i < pswd.length; i++) {
+            boolean digitFlag = Character.isDigit(password.charAt(i));
+            if(digitFlag){
+                digitLimit = true;
+                break;
             }
-            System.out.println();
-            System.out.print("Do you want to enter another width and height (Y/N)? : ");
-            sc.nextLine();
-            checker = sc.nextLine();
-            if(checker.equalsIgnoreCase("y")){
-                sentinel = true;
-            }
-            if(checker.equalsIgnoreCase("n")){
-                sentinel = false;
-            }
-            System.out.println();
-        }while(sentinel);
-        System.out.println("Program Ends");
-
-
+        }
+        if(charLimit && upperLimit && digitLimit){
+            System.out.println("Valid password\n");
+            System.out.println("Program ends");
+        }
+        else{
+            System.out.println("Invalid password\n");
+            System.out.println("Program ends");
+        }
 
     }
 }
-
+/*
+Lab11B: Password
+This next problem is going to deal with checking if someone inputs a string with a few requirements.
+Imagine you are prompted to input a password, but the password needs to include uppercase letters
+and a number. In order to do this, you must look at each char in the string and use Booleans to indicate
+certain criteria are met. Since there are 3 criteria, you should have 3 Boolean variables.
+The rules for the password are:
+• Must contain at least 8 chars
+• Must contain 1 uppercase letter
+• Must contain 1 digit
+• There are no restrictions involving lowercase letters or special chars
+When considering where to use Booleans, think of it as a “flag”, for each criteria. If you meet the
+length requirement, then the flag would change from FALSE to TRUE. Once all the flags are true, you
+will have a valid password.
+Tip: The ASCII table can be used to determine the numeric value of a particular char. You may want
+to create ranges of these numerical values for each criteria.
+Sample output #1:
+Enter a password: password1
+Invalid password
+Program Ends
+Sample output #2:
+Enter a password: P4ssw3rd
+Valid password
+Program Ends
+Sample output #3:
+Enter a password: Pas1
+Invalid password
+Program Ends
+Sample output #4:
+Enter a password: PASSword
+Invalid password
+Program Ends
+Sample output #5:
+Enter a password: Pas!w3rd
+Valid password
+Program Ends
+ */
