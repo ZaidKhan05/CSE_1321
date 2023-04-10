@@ -1,4 +1,4 @@
-//==================================== Program Lab11B.java ======================================
+//==================================== Program Lab12B.java ======================================
 /*
 Class: CSE 1321L
 Section: J51
@@ -7,7 +7,7 @@ Instructor: Dmitri Nunes Dias Fernandes
 Name: Zaid Khan
 Lab# Lab 11B
  */
-// Program Lab11B.java
+// Program Lab12B.java
 //
 
 import java.util.Scanner;
@@ -53,7 +53,7 @@ public class Lab11B
     }
 }
 /*
-Lab11B: Password
+Lab12B: Password
 This next problem is going to deal with checking if someone inputs a string with a few requirements.
 Imagine you are prompted to input a password, but the password needs to include uppercase letters
 and a number. In order to do this, you must look at each char in the string and use Booleans to indicate

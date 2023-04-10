@@ -1,4 +1,4 @@
-//==================================== Program Lab11A.java ======================================
+//==================================== Program Lab12A.java ======================================
 /*
 Class: CSE 1321L
 Section: J51
@@ -7,7 +7,7 @@ Instructor: Dmitri Nunes Dias Fernandes
 Name: Zaid Khan
 Lab# Lab 11A
  */
-// Program Lab11A.java
+// Program Lab12A.java
 //
 import java.util.Scanner;
 public class Lab11A
@@ -56,7 +56,7 @@ public class Lab11A
     }
 }
 /*
-Lab11A: OK vs ok
+Lab12A: OK vs ok
 You have probably gotten an automated text where it says something like “Text STOP to opt out of
 getting notifications”. If this happens do you reply with “STOP”, “Stop”, or “stop”? All 3 of these are
 completely different strings. How should you develop an application which would allow a user to input
@@ -68,7 +68,7 @@ DO NOT solve this problem using a complicated IF statement which will take all t
 assume if the user types anything other than “yes” then the user does not want to rerun the program.
 Tip: You need to use a function to compare if 2 strings are equal to each other. Try searching
 something like “<your language> string function”, there are many different functions available.
-Remember, the class name should be Lab11A.
+Remember, the class name should be Lab12A.
 The user input is indicated in bold.
 
 Sample output #1:
