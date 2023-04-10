@@ -34,7 +34,7 @@ public class Lab12B
     public static void main (String[] args) {
         //e
         Scanner sc = new Scanner(System.in);
-        dog dog = new dog;
+        dog dog = new dog();
         System.out.println("You are about to create a dog.");
         System.out.print("How old is the dog: ");
         dog.age = sc.nextInt();
@@ -46,7 +46,7 @@ public class Lab12B
         dog.age = sc.nextInt();
         System.out.print("What breed is the dog: ");
         dog.age = sc.nextInt();
-        System.out.print(dog.name+" is a ")
+        System.out.print(dog.name+" is a ");
 
 
     }
