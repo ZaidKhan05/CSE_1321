@@ -39,14 +39,22 @@ public class Lab12B
         System.out.print("How old is the dog: ");
         dog.age = sc.nextInt();
         System.out.print("How much does the dog weigh: ");
-        dog.age = sc.nextInt();
+        dog.weight = sc.nextDouble();
         System.out.print("What is the dog’s name: ");
-        dog.age = sc.nextInt();
+        sc.nextLine();
+        dog.name = sc.nextLine();
         System.out.print("HWhat color is the dog: ");
-        dog.age = sc.nextInt();
+        dog.furColor = sc.nextLine();
         System.out.print("What breed is the dog: ");
-        dog.age = sc.nextInt();
-        System.out.print(dog.name+" is a ");
+        dog.breed = sc.nextLine();
+        System.out.println(dog.name+" is a "+dog.age+" year old "+dog.furColor+" "+dog.breed+" that weighs "+dog.weight+" lbs.");
+        dog.bark();
+        System.out.print(dog.name+"is hungry, how much should he eat: ");
+        dog.eat(sc.nextDouble());
+        System.out.print(dog.name+" isn’t a very good name. What should they be renamed to: ");
+        sc.nextLine();
+        dog.newName(sc.nextLine());
+        System.out.println(dog.name+" is a "+dog.age+" year old "+dog.furColor+" "+dog.breed+" that weighs "+dog.weight+" lbs.");
 
 
     }
