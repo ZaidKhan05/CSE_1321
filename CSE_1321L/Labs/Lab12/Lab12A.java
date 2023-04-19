@@ -41,6 +41,7 @@ public class Lab12A
         Chair e = new Chair();
         Scanner sc = new Scanner(System.in);
         String chairStatus;
+        System.out.println(e.rolling);
         System.out.println("You are about to create a chair.");
         System.out.print("How many legs does your chair have: ");
         e.numOfLegs = sc.nextInt();
