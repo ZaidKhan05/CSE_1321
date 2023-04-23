@@ -58,6 +58,11 @@ public class Assignment7B {
         }
         do{
             //e
+            System.out.println("What will you do?\n" +
+                    "1) Fill in a pixel\n" +
+                    "2) Fill in a line\n" +
+                    "3) Print the image\n" +
+                    "4) Quit");
             break;
         }while(true);
     }
