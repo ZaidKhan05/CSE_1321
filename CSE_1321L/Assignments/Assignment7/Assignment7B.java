@@ -8,10 +8,12 @@ Name: Zaid Khan
 Assignment# Assignment 7B
  */
 
+import java.util.Scanner;
+
 class pixel{
-    int red;
-    int green;
-    int blue;
+    public int red;
+    public int green;
+    public int blue;
 
     void changeRGB(int red, int green, int blue){
         this.red = red;
@@ -25,9 +27,35 @@ class pixel{
 
 public class Assignment7B {
     public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
         //e
+        int redVal;
+        int greenVal;
+        int blueVal;
+        System.out.println("[Color Art Program]");
+        System.out.print("Enter an image width: ");
+        int width = sc.nextInt();
+        System.out.print("Enter an image height: ");
+        int height = sc.nextInt();
+        pixel[][] image = new pixel [height][width];
+        System.out.print("Enter the fill color's red value: ");
+        redVal = sc.nextInt();
+        System.out.print("Enter the fill color's green value: ");
+        greenVal = sc.nextInt();
+        System.out.print("Enter the fill color's blue value: ");
+        blueVal = sc.nextInt();
+        for(int i = 0; i < image.length; i++){
+            for(int j = 0; j < image[0].length; j++){
+                image[i][j].red = redVal;
+                image[i][j].green = greenVal;
+                image[i][j].blue = blueVal;
+               // System.out.print((image[i][j]) + "|");
+            }
+           // System.out.println();
+        }
         do{
-
+            //e
+            break;
         }while(true);
     }
 }
