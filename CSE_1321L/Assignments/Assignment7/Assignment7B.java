@@ -15,6 +15,11 @@ class pixel{
     public int green;
     public int blue;
 
+    // public pixel(){
+    //     red = 0;
+    //     green = 0;
+    //     blue = 0;
+    // }
     void changeRGB(int red, int green, int blue){
         this.red = red;
         this.green = green;
@@ -28,6 +33,7 @@ class pixel{
 public class Assignment7B {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
+        
         //e
         int redVal;
         int greenVal;
@@ -37,19 +43,27 @@ public class Assignment7B {
         int width = sc.nextInt();
         System.out.print("Enter an image height: ");
         int height = sc.nextInt();
+
         pixel[][] image = new pixel [height][width];
+        // for(int i = 0; i < image.length; i++){
+        //     for(int j = 0; j < image[0].length; j++){
+        //         image[i][j] = new pixel();
+        //        // System.out.print((image[i][j]) + "|");
+        //     }
+        //    // System.out.println();
+        // }
         System.out.print("Enter the fill color's red value: ");
         redVal = sc.nextInt();
         System.out.print("Enter the fill color's green value: ");
         greenVal = sc.nextInt();
         System.out.print("Enter the fill color's blue value: ");
         blueVal = sc.nextInt();
+
         for(int i = 0; i < image.length; i++){
             for(int j = 0; j < image[0].length; j++){
-                image[i][j].red = redVal;
-                image[i][j].green = greenVal;
-                image[i][j].blue = blueVal;
-               // System.out.print((image[i][j]) + "|");
+                image[i][j] = new pixel();
+                image[i][j].changeRGB(redVal, greenVal, blueVal);
+                // image[i][j].printRGB();
             }
            // System.out.println();
         }
