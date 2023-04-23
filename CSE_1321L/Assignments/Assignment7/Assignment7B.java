@@ -15,11 +15,7 @@ class pixel{
     public int green;
     public int blue;
 
-    // public pixel(){
-    //     red = 0;
-    //     green = 0;
-    //     blue = 0;
-    // }
+    
     void changeRGB(int red, int green, int blue){
         this.red = red;
         this.green = green;
@@ -44,21 +40,14 @@ public class Assignment7B {
         System.out.print("Enter an image height: ");
         int height = sc.nextInt();
 
-        pixel[][] image = new pixel [height][width];
-        // for(int i = 0; i < image.length; i++){
-        //     for(int j = 0; j < image[0].length; j++){
-        //         image[i][j] = new pixel();
-        //        // System.out.print((image[i][j]) + "|");
-        //     }
-        //    // System.out.println();
-        // }
         System.out.print("Enter the fill color's red value: ");
         redVal = sc.nextInt();
         System.out.print("Enter the fill color's green value: ");
         greenVal = sc.nextInt();
         System.out.print("Enter the fill color's blue value: ");
         blueVal = sc.nextInt();
-
+        
+        pixel[][] image = new pixel [height][width];
         for(int i = 0; i < image.length; i++){
             for(int j = 0; j < image[0].length; j++){
                 image[i][j] = new pixel();
