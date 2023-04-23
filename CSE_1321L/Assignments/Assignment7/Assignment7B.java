@@ -8,12 +8,27 @@ Name: Zaid Khan
 Assignment# Assignment 7B
  */
 
-import java.util.Random;
+class pixel{
+    int red;
+    int green;
+    int blue;
+
+    void changeRGB(int red, int green, int blue){
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
+    }
+    void printRGB(){
+        System.out.print(this.red+" "+this.green+" "+this.blue);
+    }
+}
 
 public class Assignment7B {
     public static void main(String args[]){
         //e
+        do{
 
+        }while(true);
     }
 }
 /*
