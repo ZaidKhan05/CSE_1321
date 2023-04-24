@@ -12,6 +12,8 @@ Lab# Lab 13A
 import java.util.Scanner;
 
 class buildingBlueprint{
+    public int buildingNum;
+
     private int stories;
 
     private int aptNum;
@@ -62,7 +64,7 @@ class buildingBlueprint{
         return this.full;
     }
     public void printStats(){
-        System.out.println("Building 2 has "+this.getStories()+" floors, "+this.getApt()+" apartments, and is "+this.getOccupancy()+"% occupied. Full? "+this.getFill());
+        System.out.println("Building "+this.buildingNum+" has "+this.getStories()+" floors, "+this.getApt()+" apartments, and is "+this.getOccupancy()+"% occupied. Full? "+this.getFill());
     }
 
 
@@ -74,15 +76,20 @@ public class Lab13A
         //e
         buildingBlueprint buildingOne = new buildingBlueprint();
         buildingBlueprint buildingTwo = new buildingBlueprint(30, 30, .75f);
+        buildingOne.buildingNum = 1;
+        buildingTwo.buildingNum = 2;
         System.out.println("Year 2020:");
         buildingOne.printStats();
         buildingTwo.printStats();
+        System.out.println("Many years pass.\nYear 2043:");
         //e
         buildingOne.setOccupancy(0);
         buildingTwo.setOccupancy(1);
         //ee
         buildingOne.printStats();
         buildingTwo.printStats();
+
+        System.out.println("Looks like people prefer taller buildings.");
 
     }
 }

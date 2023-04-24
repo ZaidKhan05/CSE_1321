@@ -22,7 +22,7 @@ class pixel{
         this.blue = blue;
     }
     void printRGB(){
-        System.out.print(this.red+" "+this.green+" "+this.blue);
+        System.out.print(this.red+" "+this.green+" "+this.blue+" ");
     }
 }
 
@@ -56,6 +56,9 @@ public class Assignment7B {
             }
            // System.out.println();
         }
+        int selection = 0;
+        int row, column;
+        String rowColumn; 
         do{
             //e
             System.out.println("What will you do?\n" +
@@ -63,7 +66,77 @@ public class Assignment7B {
                     "2) Fill in a line\n" +
                     "3) Print the image\n" +
                     "4) Quit");
-            break;
+                    //e
+            System.out.print("Choice? ");
+            selection = sc.nextInt();
+            
+            switch(selection){
+                case 1:
+                //fill pixel
+                System.out.print("Row: ");
+                row = sc.nextInt();
+                System.out.print("Column: ");
+                column = sc.nextInt();
+                System.out.print("New Red Color: ");
+                redVal = sc.nextInt();
+                System.out.print("New Green Color: ");
+                greenVal = sc.nextInt();
+                System.out.print("New Blue Color: ");
+                blueVal = sc.nextInt();
+                image[row-1][column-1].changeRGB(redVal, greenVal, blueVal);
+                break;
+                case 2:
+                //fill line
+                System.out.print("Do you want to fill in a row or a column?[Row/Column]: ");
+                sc.nextLine();
+                rowColumn = sc.nextLine();
+                if(rowColumn.equalsIgnoreCase("row")){
+                System.out.print("Which row? ");
+                row = sc.nextInt();
+                System.out.print("New Red Color: ");
+                redVal = sc.nextInt();
+                System.out.print("New Green Color: ");
+                greenVal = sc.nextInt();
+                System.out.print("New Blue Color: ");
+                blueVal = sc.nextInt();
+                for(int i = 0; i < image[0].length; i++){     
+                    image[row-1][i].changeRGB(redVal, greenVal, blueVal);
+                }
+                }
+                if(rowColumn.equalsIgnoreCase("column")){
+                    System.out.print("Which column? ");
+                    column = sc.nextInt();
+                    System.out.print("New Red Color: ");
+                    redVal = sc.nextInt();
+                    System.out.print("New Green Color: ");
+                    greenVal = sc.nextInt();
+                    System.out.print("New Blue Color: ");
+                    blueVal = sc.nextInt();
+                    for(int i = 0; i < image.length; i++){     
+                        image[i][column-1].changeRGB(redVal, greenVal, blueVal);
+                    }
+                    
+                }
+                
+                break;
+                case 3:
+                //print image
+                System.out.println("PPM File Contents:\nP3");
+                System.out.println(width+" "+height+"\n255");
+                for(int i = 0; i < image.length; i++){
+                    for(int j = 0; j < image[0].length; j++){
+                        
+                        image[i][j].printRGB();
+                    }
+                   System.out.println();
+                }
+                break;
+                case 4:
+                break;
+            }
+            if(selection == 4){
+                break;
+            }
         }while(true);
     }
 }
